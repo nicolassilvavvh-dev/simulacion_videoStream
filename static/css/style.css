@@ -1,0 +1,274 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+
+body {
+   background-color: white;
+}
+
+/* Barra principal superior*/
+
+.barra-navegacion {
+   display: flex;
+   justify-content: space-between;
+   background-color: white;
+   padding: 15px 40px;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+   align-items: center;
+}
+
+.logotipo {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+
+.logotipo img {
+   height: 100px;
+   width: auto;
+   margin-left: 20px;
+}
+
+.azul {
+   color: #295EA4;
+}
+
+.nav {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.barra-busqueda {
+   height: 32px;
+   width: 180px;
+   padding: 0 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   font-size: 0.85rem;
+}
+
+.btn-like {
+   height: 32px;
+   padding: 0 15px;
+   background-color: #295EA4;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   font-weight: bold;
+   font-size: 0.85rem;
+   cursor: pointer;
+}
+
+.carrito-contenedor {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   margin-left: 10px;
+}
+
+.iconoLibros {
+   height: 18px;
+   margin-right: 10px;
+   width: auto;
+}
+
+.contador-carrito {
+   font-size: 0.85rem;
+   font-weight: bold;
+}
+
+.seccion-categorias {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   background-color: #D1DCE8;
+   padding: 15px 20px;
+   margin: 20px auto;
+   max-width: 1200px;
+}
+
+.item-categoria {
+   text-align: center;
+   background-color: white;
+   width: 150px;
+}
+
+.item-categoria img {
+   width: 110px;
+   height: 80px;
+   border-radius: 4px;
+   object-fit: cover;
+}
+
+.item-categoria p {
+   font-size: 0.85rem;
+   margin-top: 5px;
+   color: #333;
+}
+
+.contenedor-principal {
+   display: flex;
+   gap: 25px;
+   max-width: 1200px;
+   margin: 0 auto 40px auto;
+}
+
+.columna-izquierda {
+   flex: 3;
+}
+
+.banner-promo {
+   background-color: #e7e7e7;
+   display: flex;
+   align-items: center;
+   padding: 40px;
+   gap: 20px;
+   height: 400px;
+}
+
+.texto-promo {
+   flex: 1;
+}
+
+.texto-promo h2 {
+   font-size: 2.2rem;
+   line-height: 1.2;
+   color: #222;
+   margin-bottom: 20px;
+   font-weight: normal;
+}
+
+.texto-promo h2 strong {
+   font-weight: bold;
+}
+
+.texto-promo p {
+   font-size: 1.2rem;
+   color: #333;
+}
+
+.texto-promo a {
+   color: #333;
+}
+
+.naranja {
+   color: #ff6b00;
+}
+
+.imagen-promo {
+   flex: 1;
+}
+
+.imagen-promo img {
+   width: 100%;
+   height: 320px;
+   border-radius: 4px;
+}
+
+/* Toda la columna derecha*/
+
+.columna-derecha {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+.titulo-seccion {
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: #000;
+   margin-bottom: 5px;
+}
+
+.tarjeta-recomendado {
+   background-color: white;
+   border: 1px solid rgb(214, 212, 212);
+   border-radius: 4px;
+   padding: 12px;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.imagen-libro {
+   width: 70px;
+   height: 80px;
+   object-fit: cover;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   flex-shrink: 0;
+}
+
+.info-libro {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+}
+
+.nombre-libro {
+   font-size: 0.9rem;
+   font-weight: bold;
+   color: #000;
+}
+
+.autor-libro {
+   font-size: 0.8rem;
+   color: #666;
+}
+
+.enlace-mas {
+   font-size: 0.8rem;
+   color: #295EA4;
+   text-decoration: underline;
+   margin-top: 4px;
+}
+
+/* diseño del boton mas un hover*/
+
+.btn-agregar {
+   width: 32px;
+   height: 32px;
+   background-color: #182F45;
+   color: white;
+   border: none;
+   border-radius: 50%;
+   font-size: 1.2rem;
+   font-weight: bold;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   margin-left: 0;
+}
+
+.btn-agregar:hover {
+   background-color: #295EA4;
+}
+
+/* Linea azul*/
+
+.barra {
+   border-bottom: 5px solid #164E9C;
+   padding-bottom: 0.1rem;
+   width: 75px;
+   margin-bottom: 30px;
+}
+
+/* Video */
+
+.video-responsive {
+   width: 500px;
+   height: 300px;
+   border-radius: 6px;
+   background-color: #000;
+}

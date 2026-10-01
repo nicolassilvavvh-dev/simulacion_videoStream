@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoStream</title>
+    <meta name="author" content="Nicolas Perinetti">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <header class="barra-navegacion">
+        <div class="logotipo">
+            <img src="static/images/images (4).png" alt="Logo Libro">
+            <h1>Video<span>Stream</span></h1>
+        </div>
+        <div class="nav">
+            <input type="text" class="barra-busqueda" id="inputEmail" placeholder="Email">
+            <button class="btn-like" id="btnLogin">Ingresar</button>
+            <div class="carrito-contenedor">
+                <img src="static/images/imagen(9).png" alt="pilaLibros" class="iconoLibros">
+                <img src="" alt="perfil">
+            </div>
+        </div>
+    </header>
+    <main class="contenedor-principal">
+        <section class="columna-izquierda">
+            <div class="Video principal">
+                <div class="imagen-promo">
+                    <video controls class="video-responsive" id="video"
+                        poster="static/video/¿qué_es_una_biblioteca_.mp4">
+                        <source src="static/video/¿qué_es_una_biblioteca_.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div>
+                    Lagos y montañas
+                </div>
+            </div>
+        </section>
+        <section class="columna-derecha">
+            <h2 class="titulo-seccion">Siguiente en la cola</h2>
+            <button>Limpiar cola</button>
+            <div class="tarjeta-recomendado">
+                <img src="static/images/portada_cien_anos_de_soledad_0.png" alt="Cien años de soledad"
+                    class="imagen-libro">
+                <div class="info-libro">
+                    <p class="nombre-libro">explorando en la patagonia</p>
+                    <p class="autor-libro">VideoStream</p>
+                    <p>120 mil visualizaciones</p>
+                </div>
+                <button class="btn-agregar" id="cienañosdesoledad">+</button>
+            </div>
+            <div class="tarjeta-recomendado">
+                <img src="static/images/images(10).png" alt="Sapiens" class="imagen-libro">
+                <div class="info-libro">
+                    <p class="nombre-libro">Comida callejera</p>
+                    <p class="autor-libro">VideoStream</p>
+                    <p>98 mil visualizaciones</p>
+                </div>
+                <button class="btn-agregar" id="sapiens">+</button>
+            </div>
+            <div class="tarjeta-recomendado">
+                <img src="static/images/images(3)(1).png" alt="El principito" class="imagen-libro">
+                <div class="info-libro">
+                    <p class="nombre-libro">Ciudades del mundo</p>
+                    <p class="autor-libro">VideoStream</p>
+                    <p>210 mil visualizaciones</p>
+                </div>
+                <button class="btn-agregar" id="elprincipito">+</button>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Recomendados
+                </h2>
+                <div>
+                                    <img src="static/images/portada_cien_anos_de_soledad_0.png" alt="Cien años de soledad"
+                    class="imagen-libro">
+                <div class="info-libro">
+                    <p class="nombre-libro">explorando en la patagonia</p>
+                    <p class="autor-libro">VideoStream</p>
+                    <p>120 mil visualizaciones</p>
+                </div>
+                <button class="btn-agregar" id="cienañosdesoledad">+</button>
+            </div>
+            <div class="tarjeta-recomendado">
+                <img src="static/images/images(10).png" alt="Sapiens" class="imagen-libro">
+                <div class="info-libro">
+                    <p class="nombre-libro">Comida callejera</p>
+                    <p class="autor-libro">VideoStream</p>
+                    <p>98 mil visualizaciones</p>
+                </div>
+                <button class="btn-agregar" id="sapiens">+</button>
+            </div>
+            <div class="tarjeta-recomendado">
+                <img src="static/images/images(3)(1).png" alt="El principito" class="imagen-libro">
+                <div class="info-libro">
+                    <p class="nombre-libro">Ciudades del mundo</p>
+                    <p class="autor-libro">VideoStream</p>
+                    <p>210 mil visualizaciones</p>
+                </div>
+                <button class="btn-agregar" id="elprincipito">+</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
