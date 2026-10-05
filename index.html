@@ -12,114 +12,151 @@
 <body>
     <header class="barra-navegacion">
         <div class="logotipo">
-            <img src="static/images/images (4).png" alt="Logo Libro">
+            <img src="static/images/images (4).png" alt="Logo VideoStream">
             <h1>Video<span>Stream</span></h1>
             <a href="#" class="hover borde">Inicio</a>
             <a href="#" class="hover borde">Explorar</a>
             <a href="#" class="hover borde">Mi lista</a>
         </div>
-        
+
         <div class="nav">
-            <input type="text" class="barra-busqueda" id="inputEmail" placeholder="Email">
+            <input type="text" class="barra-busqueda" id="inputBusqueda" placeholder="Buscar...">
             <div class="carrito-contenedor">
-                <img src="static/images/notificacion.png" alt="pilaLibros" class="iconoLibros">
-                <img src="" alt="perfil">
+                <img src="static/images/notificacion.png" alt="Notificaciones" class="iconoLibros">
+                <img src="static/images/perfil.png" alt="Perfil" class="icono-perfil">
             </div>
         </div>
     </header>
+
     <main class="contenedor-principal">
+        <!-- Columna Izquierda: Reproductor Principal -->
         <section class="columna-izquierda">
-            <div class="Video principal">
+            <div class="video-principal">
                 <div class="imagen-promo">
-                    <video controls class="video-responsive" id="video"
-                        poster="static/video/¿qué_es_una_biblioteca_.mp4">
+                    <video controls class="video-responsive" id="video-reproductor" poster="static/images/poster.jpg">
                         <source src="static/video/¿qué_es_una_biblioteca_.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
                     </video>
                 </div>
-                <div>
-                    Lagos y montañas
+                
+                <h2 class="titulo-video">Lagos y montañas</h2>
+                <p class="gris">95 mil visualizaciones ° 10 abr 2024</p>
+                
+                <div class="acciones-video">
+                    <button id="btn-like" class="btn-interaccion">
+                        <img src="static/images/me-gusta.png" alt="Like" class="botonlike"> 
+                        <span id="like-count">4800</span>
+                    </button>
+                    <button id="btn-dislike" class="btn-interaccion">
+                        <img src="static/images/no-me-gusta.png" alt="Dislike" class="botondislike"> 
+                        <span id="dislike-count">120</span>
+                    </button>
                 </div>
-                <p>95 mil visualizaciones  ° 10 abr 2024</p>
-                <div>
-                    <img src="static/images/me-gusta.png" class="botonlike" alt="Like"> 4.8 k
-                    <img src="static/images/no-me-gusta.png" class="botondislike" alt="dislike"> 120
-                </div>
-                <div class="logo">
 
+                <div class="canal-info">
+                    <img src="static/images/logo-canal.png" alt="Logo Canal" class="logo-canal">
+                    <div class="detalles-canal">
+                        <p class="nombre-canal">VideoStream</p>
+                        <p class="subscriptores"><span id="sub-count">1.2 M</span> de suscriptores</p>
+                    </div>
+                    <button id="btn-suscribirse" class="btn-rojo">Suscribirse</button>
+                </div>
+
+                <div class="descripcion-video">
+                    <p id="texto-descripcion">Un recorrido por los lagos más hermosos de la Patagonia y sus consejos, rutas y pasajes imperdibles.</p>
+                    <button id="btn-mostrar-mas" class="enlace-mas">Mostrar más</button>
                 </div>
             </div>
         </section>
+
+        <!-- Columna Derecha: Cola de reproducción y Recomendados -->
         <section class="columna-derecha">
-            <h2 class="titulo-seccion">Siguiente en la cola</h2>
-            <button>Limpiar cola</button>
-            <div class="tarjeta-recomendado">
-                <img src="static/images/portada_cien_anos_de_soledad_0.png" alt="Cien años de soledad"
-                    class="imagen-libro">
-                <div class="info-libro">
-                    <p class="nombre-libro">explorando en la patagonia</p>
-                    <p class="autor-libro">VideoStream</p>
-                    <p>120 mil visualizaciones</p>
-                </div>
-                <button class="btn-agregar" id="cienañosdesoledad">+</button>
+            <div class="encabezado-seccion">
+                <h2 class="titulo-seccion">Siguiente en la cola</h2>
+                <button id="btn-limpiar-cola" class="btn-secundario">Limpiar cola</button>
             </div>
-            <div class="tarjeta-recomendado">
-                <img src="static/images/images(10).png" alt="Sapiens" class="imagen-libro">
-                <div class="info-libro">
-                    <p class="nombre-libro">Comida callejera</p>
-                    <p class="autor-libro">VideoStream</p>
-                    <p>98 mil visualizaciones</p>
+
+            <div id="contenedor-cola">
+                <div class="tarjeta-recomendado">
+                    <div class="contenedor-miniatura">
+                        <img src="static/images/portada_cien_anos_de_soledad_0.png" alt="Explorando Patagonia" class="imagen-libro">
+                        <span class="duracion">6:15</span>
+                    </div>
+                    <div class="info-libro">
+                        <p class="nombre-libro">Explorando la Patagonia</p>
+                        <p class="autor-libro">VideoStream</p>
+                        <p class="visitas">120 mil visualizaciones</p>
+                    </div>
+                    <button class="btn-quitar-cola">×</button>
                 </div>
-                <button class="btn-agregar" id="sapiens">+</button>
             </div>
-            <div class="tarjeta-recomendado">
-                <img src="static/images/images(3)(1).png" alt="El principito" class="imagen-libro">
-                <div class="info-libro">
-                    <p class="nombre-libro">Ciudades del mundo</p>
-                    <p class="autor-libro">VideoStream</p>
-                    <p>210 mil visualizaciones</p>
+
+            <h2 class="titulo-seccion separador">Recomendados</h2>
+            <div id="contenedor-recomendados">
+                <div class="tarjeta-recomendado">
+                    <div class="contenedor-miniatura">
+                        <img src="static/images/images(10).png" alt="Rutas de trekking" class="imagen-libro">
+                        <span class="duracion">5:20</span>
+                    </div>
+                    <div class="info-libro">
+                        <p class="nombre-libro">Rutas de trekking</p>
+                        <p class="autor-libro">VideoStream</p>
+                        <p class="visitas">80 mil visualizaciones</p>
+                    </div>
+                    <button class="btn-agregar">+</button>
                 </div>
-                <button class="btn-agregar" id="elprincipito">+</button>
-            </div>
-            <div>
-                <h2>Recomendados
-                </h2>
-                <div>
-                    <img src="static/images/portada_cien_anos_de_soledad_0.png" alt="Cien años de soledad"
-                    class="imagen-libro">
-                <div class="info-libro">
-                    <p class="nombre-libro">explorando en la patagonia</p>
-                    <p class="autor-libro">VideoStream</p>
-                    <p>120 mil visualizaciones</p>
-                </div>
-                <button class="btn-agregar" id="cienañosdesoledad">+</button>
-            </div>
-            <div class="tarjeta-recomendado">
-                <img src="static/images/images(10).png" alt="Sapiens" class="imagen-libro">
-                <div class="info-libro">
-                    <p class="nombre-libro">Comida callejera</p>
-                    <p class="autor-libro">VideoStream</p>
-                    <p>98 mil visualizaciones</p>
-                </div>
-                <button class="btn-agregar" id="sapiens">+</button>
-            </div>
-            <div class="tarjeta-recomendado">
-                <img src="static/images/images(3)(1).png" alt="El principito" class="imagen-libro">
-                <div class="info-libro">
-                    <p class="nombre-libro">Ciudades del mundo</p>
-                    <p class="autor-libro">VideoStream</p>
-                    <p>210 mil visualizaciones</p>
-                </div>
-                <button class="btn-agregar" id="elprincipito">+</button>
+
+                <div class="tarjeta-recomendado">
+                    <div class="contenedor-miniatura">
+                        <img src="static/images/images(3)(1).png" alt="Fauna patagónica" class="imagen-libro">
+                        <span class="duracion">3:50</span>
+                    </div>
+                    <div class="info-libro">
+                        <p class="nombre-libro">Fauna patagónica</p>
+                        <p class="autor-libro">VideoStream</p>
+                        <p class="visitas">60 mil visualizaciones</p>
+                    </div>
+                    <button class="btn-agregar">+</button>
                 </div>
             </div>
         </section>
+
+        <!-- Sección Inferior: Más Videos -->
         <section class="columna-baja">
             <h2>Más videos</h2>
-            <div>
+            <div class="grid-mas-videos">
+                <div class="tarjeta-masVideos">
+                    <div class="contenedor-miniatura">
+                        <img src="static/images/images(3)(1).png" alt="Ciudades del mundo" class="imagen-libro">
+                        <span class="duracion">8:12</span>
+                    </div>
+                    <div class="info-libro">
+                        <p class="nombre-libro">Ciudades del mundo</p>
+                        <p class="autor-libro">VideoStream</p>
+                        <p class="visitas">210 mil visualizaciones</p>
+                    </div>
+                    <button class="btn-agregar">+</button>
+                </div>
 
+                <div class="tarjeta-masVideos">
+                    <div class="contenedor-miniatura">
+                        <img src="static/images/images(10).png" alt="Comida callejera" class="imagen-libro">
+                        <span class="duracion">4:10</span>
+                    </div>
+                    <div class="info-libro">
+                        <p class="nombre-libro">Comida callejera</p>
+                        <p class="autor-libro">VideoStream</p>
+                        <p class="visitas">98 mil visualizaciones</p>
+                    </div>
+                    <button class="btn-agregar">+</button>
+                </div>
             </div>
         </section>
     </main>
+
+    <div id="alerta-toast" class="toast oculto">
+        <span id="toast-mensaje">Video añadido a la cola</span>
+    </div>
 
     <script src="static/js/script.js"></script>
 </body>
