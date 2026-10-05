@@ -20,6 +20,12 @@ body {
    align-items: center;
 }
 
+.borde{
+   text-decoration: none;
+   color: black;
+   font-size: 17px;
+}
+
 .logotipo {
    display: flex;
    align-items: center;
